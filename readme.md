@@ -42,6 +42,7 @@ Based on the example documents above, the resulting inverted index looks like th
 
 ### 4. FLOW
 
+```
 Raw Data (CSV/XML/Wikipedia dump)
 ↓
 Parser
@@ -55,6 +56,7 @@ Inverted Index
 Search Query
 ↓
 Matching Documents
+```
 
 ## SUMMARY
 
@@ -69,3 +71,7 @@ Matching Documents
 ### HI
 
 -- if you want suggest me then definately go , i will grateful for you this act.
+
+```
+
+```
