@@ -40,8 +40,21 @@ Based on the example documents above, the resulting inverted index looks like th
 | **"only"**  | `[2]`        |
 | **"the"**   | `[2, 3]`     |
 
+## SUMMARY
+
+**TOCKNIZATION** (text is converted into tolen a number)
+**FILTERING** -->
+
+1. LOWERCASING: SHall ShaLL --> shall small case
+2. DROPPING COMMON WORDS: ex. it, al, we, be, ending verb(word)
+3. STEMMING: (snow ball stemm -- liberary) fishing+ fished +fisher = fish
+
 ## Getting Started
 
 _(Add your installation or setup instructions here)_
 
 To use the search engine, initialize the indexer, pass in your collection of documents, and query the index to instantly retrieve matching Document IDs.
+
+### HI
+
+-- if you want suggest me then definately go , i will grateful for you this act.
