@@ -60,18 +60,27 @@ Matching Documents
 
 ## SUMMARY
 
+```
 **TOCKNIZATION** (text is converted into tolen a number) \n
 
 **FILTERING** -->
 
 1. LOWERCASING: SHall ShaLL --> shall small case
 2. DROPPING COMMON WORDS: ex. it, al, we, be, ending verb(word)
-3. STEMMING: (snow ball stemm -- liberary) fishing+ fished +fisher = fish
+3. STEMMING/LEMMATIZATION: (snow ball stemm -- liberary) fishing+ fished +fisher = fish
+
+**INVERTED-INDEXING**
+```
+
+### ADVANCE
+
+- TERM FREQUENCY: how many times the word occured in doc
+- RANKING: TF-IDF
+- POSITIONS: were in the doc The word Appears.
+- OFFSET: character/byte position for highlighting
+- PROXIMATE QUERIES: "Fish is climibing"
+- SNIPPEt geeneration and highlighting
 
 ### HI
 
--- if you want suggest me then definately go , i will grateful for you this act.
-
-```
-
-```
+-- if you want suggest me SOME+thing then definately go , i will grateful for you this act.
