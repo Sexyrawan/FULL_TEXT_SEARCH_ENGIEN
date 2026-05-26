@@ -80,6 +80,7 @@ Matching Documents
 - OFFSET: character/byte position for highlighting
 - PROXIMATE QUERIES: "Fish is climibing"
 - SNIPPEt geeneration and highlighting
+- fish ->[1:1:7:28, 5:1:1:0]
 
 ### HI
 
