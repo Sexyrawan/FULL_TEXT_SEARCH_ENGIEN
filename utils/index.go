@@ -24,7 +24,8 @@ func (idx Index) Add(docs []Document) {
 	}
 }
 
-// Search finds matching document IDs
+// Search finds matching document IDs using intersection (AND search)
+// Isse wahi documents return honge jisme query ke saare words present honge.
 func (idx Index) Search(query string) []int {
 	tokens := Tokenizer(query)
 	filtered := Filter(tokens)
@@ -32,5 +33,37 @@ func (idx Index) Search(query string) []int {
 	if len(filtered) == 0 {
 		return []int{}
 	}
-	return idx[filtered[0]]
+
+	// Pehle token ke document IDs se shuru karte hain
+	result := idx[filtered[0]]
+
+	// Baaki tokens ke document IDs ke sath intersection (AND) karte hain
+	for _, token := range filtered[1:] {
+		result = intersect(result, idx[token])
+		// Agar beech me hi koi list empty ho jaye, toh aage search karne ki zarurat nahi hai
+		if len(result) == 0 {
+			break
+		}
+	}
+
+	return result
+}
+
+// intersect sorted slices a aur b ka intersection (common elements) nikalta hai.
+// Kyunki hamare index me IDs sorted order me append hote hain, hum O(N) time complexity me intersection nikal sakte hain.
+func intersect(a, b []int) []int {
+	res := make([]int, 0)
+	i, j := 0, 0
+	for i < len(a) && j < len(b) {
+		if a[i] == b[j] {
+			res = append(res, a[i])
+			i++
+			j++
+		} else if a[i] < b[j] {
+			i++
+		} else {
+			j++
+		}
+	}
+	return res
 }
